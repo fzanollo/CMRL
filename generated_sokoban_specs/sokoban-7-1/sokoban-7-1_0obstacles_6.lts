@@ -1,0 +1,117 @@
+///// Begin Config
+
+// Board diagram
+//// B = Brick
+//// F = FinalPos
+//// O = Obstacle
+//  1 2 3 4 5 6 7
+//1 - - - - - - -
+//2 - - - - - - -
+//3 - - - - - - -
+//4 - - - - - - -
+//5 - - - - - - F
+//6 - - - B - - -
+//7 - - - - - - -
+
+//Obstacles **********************************************************************************************************
+
+// *******************************************************************************************************************
+const GoalRow = 5
+const GoalCol = 7
+
+// N - K parameters. N = MaxRowCol (size of squared-board), K = MaxBrick (number of bricks)
+const MaxRowCol = 7
+const MaxBrick = 1
+
+//Size of Board
+const MaxRow = MaxRowCol    // Do not change
+const MaxCol = MaxRowCol    // Do not change
+const MinRow = 1			// Do not change
+range Rows = MinRow..MaxRow	// Do not change
+const MinCol = 1			// Do not change
+range Cols = MinCol..MaxCol	// Do not change
+
+//Starting position
+const MinPiece = 0			// Do not change
+const P = MinPiece			// Do not change
+||Player = [P]:Piece(1,1).
+
+//Bricks
+||B1 = [1]:Piece(6,4).
+
+||Plant = (  B1 || //B2  || // B3  || // B4 ||
+			Dispatcher || Player  || CheckLive || CheckSafe || CheckLive || IllegalPosition).
+
+const MinBrick = 1  				// Do not change
+const MaxPiece = MaxBrick			// Do not change
+range Bricks = MinBrick..MaxBrick	// Do not change
+range Pieces = P..MaxPiece			// Do not change
+
+
+//Winning condition
+CheckLive = NotLiveChecking,
+NotLiveChecking = ([p:Pieces].getPos[r:Rows][c:Cols] -> NotLiveChecking | startLiveCheck -> CheckWinPos[1]),
+CheckWinPos[b:Bricks] = ([b].getPos[r:Rows][c:Cols] ->  if ((r == GoalRow && c == GoalCol)
+														) then CheckWinPos[b+1] else EndCheck),
+CheckWinPos[MaxBrick+1] = Win,
+EndCheck = (checkLiveDone -> CheckLive),
+Win = (win -> Win).
+
+
+//// End Config
+set OutOfBoard = {setPos[MinRow-1][c:Cols], setPos[MaxRow+1][c:Cols], setPos[r:Rows][MinCol-1], setPos[r:Rows][MaxCol+1]}
+set Sets = {setPos[r:Rows][c:Cols]}
+set Gets = {getPos[r:Rows][c:Cols]}
+
+set SafePositions = {Sets\{OutOfBoard}}
+
+fluent PosPiece[p:Pieces][r:Rows][c:Cols] = <[p].getPos[r][c],[p].Gets\{getPos[r][c]}>
+set Checks = {checkLiveDone, checkSafeOk, startLiveCheck, startSafeCheck,win}
+set Moves = {down,left,right,up}
+set Controllable = {[p:Pieces].{Sets,Gets},Moves,Checks}
+
+set Alphabet = {Controllable, [b:Bricks].{Sets,Gets}}
+
+assert LIVE = <>(win)
+assert Witness = !LIVE
+fluent Win_no_asterisk = <win,Alphabet\{win}> initially 0
+assert LIVERank = Win_no_asterisk
+
+Piece(R=MinRow, C=MinCol) = Pos[R][C],
+Pos[r:Rows][c:Cols] = (
+								setPos[nr:Rows][nc:Cols]->Pos[nr][nc] |
+								getPos[r][c] -> Pos[r][c]
+								) + {Gets, Sets}.
+
+CheckSafe = NotSafeChecking,
+NotSafeChecking = ([p:Pieces].getPos[r:Rows][c:Cols] -> NotSafeChecking | startSafeCheck -> CheckPiece[MinPiece]),
+	CheckPiece[p:MinPiece..MaxPiece-1] = CheckTwoPieces[p][p+1],
+CheckTwoPieces[p:Pieces][q:Pieces] = ([p].getPos[r:Rows][c:Cols] -> [q].getPos[r2:Rows][c2:Cols] -> if (r2 == r && c2 == c) then Lose else CheckTwoPieces[p][q+1]),
+CheckTwoPieces[p:Pieces][MaxPiece+1] = CheckPiece[p+1],
+CheckPiece[MaxPiece] = (checkSafeOk -> CheckSafe),
+Lose = STOP.
+
+IllegalPosition = ([p:Pieces].SafePositions -> IllegalPosition),
+IP = (illegalPosition -> IP).
+IP = STOP.
+
+Dispatcher = (startSafeCheck -> SafeChecking),
+SafeChecking =  ([p:Pieces].getPos[r:Rows][c:Cols] -> SafeChecking | checkSafeOk-> startLiveCheck -> LiveChecking),
+LiveChecking =  ([p:Pieces].getPos[r:Rows][c:Cols] -> LiveChecking | checkLiveDone->Play),
+Play = (
+	right -> [P].getPos[r:Rows][c:Cols] -> (when (c<MaxCol-1) [b:Bricks].getPos[r][c+1] -> [b].setPos[r][c+2] -> [P].setPos[r][c+1] -> Dispatcher | when (c<MaxCol) [P].setPos[r][c+1] -> Dispatcher) |
+	left -> [P].getPos[r:Rows][c:Cols]  -> (when (c>MinCol+1) [b:Bricks].getPos[r][c-1] -> [b].setPos[r][c-2] -> [P].setPos[r][c-1] -> Dispatcher | when (c>MinCol) [P].setPos[r][c-1] -> Dispatcher) |
+	down -> [P].getPos[r:Rows][c:Cols]  -> (when (r<MaxRow-1) [b:Bricks].getPos[r+1][c] -> [b].setPos[r+2][c] -> [P].setPos[r+1][c] -> Dispatcher | when (r<MaxRow)[P].setPos[r+1][c] -> Dispatcher) |
+	up -> [P].getPos[r:Rows][c:Cols]  -> (when (r>MinRow+1) [b:Bricks].getPos[r-1][c] -> [b].setPos[r-2][c] -> [P].setPos[r-1][c] -> Dispatcher | when (r>MinRow) [P].setPos[r-1][c] -> Dispatcher)
+) + {[p:Pieces].Gets,[p:Pieces].Sets}.
+
+
+controllerSpec Goal = {
+	controllable = {Controllable}
+	liveness = {LIVERank}
+}
+assert Check = ([]<>LIVERank)
+
+controller ||MonolithicController = Plant~{Goal}.
+
+heuristic ||DirectedController = Plant~{Goal}.

@@ -1,0 +1,2 @@
+instance_name,execution_time,result,n_transitions,max_states,winning_state_size,game_state_size
+sokoban-5-1_2obstaclesC1,75.90130424499512,OK,108,106,1496,7065

@@ -1,0 +1,4 @@
+training time: 11839.025407791138
+selection time: 29.601566553115845
+testing time: 89.54911541938782
+Esto es con la nueva implementacion de Dario

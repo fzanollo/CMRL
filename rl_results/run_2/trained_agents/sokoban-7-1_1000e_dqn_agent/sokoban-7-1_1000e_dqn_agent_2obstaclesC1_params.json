@@ -1,0 +1,18 @@
+{
+    "learning_rate": 0.0001,
+    "gamma": 0.99,
+    "epsilon": 1.0,
+    "epsilon_min": 0.01,
+    "epsilon_decay_episodes": 888,
+    "buffer_size": 100000,
+    "batch_size": 256,
+    "tau": 0.001,
+    "hidden_layers": [
+        512,
+        256,
+        128
+    ],
+    "use_priority_replay": true,
+    "target_update_freq": null,
+    "episodes": 1000
+}

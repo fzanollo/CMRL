@@ -1,0 +1,151 @@
+Model,Scenario,instance_name,execution_time,result,ExpandedStates,UsedStates,ExpandedTransitions,UsedTransitions,Elapsed in Synthesis,findNewGoalsCalls,findNewErrorsCalls,propagateGoalsCalls,propagateErrorsCalls,maxMemoryUsed,heuristicTime,Composition time
+DQN Agent 400e,0obstacles_1,sokoban-4-1_0obstacles_1,0.6519935131072998,OK,620,92,656,92,307,1,48,1,36,,0,64
+DQN Agent 1000e,0obstacles_1,sokoban-4-1_0obstacles_1,0.7093384265899658,OK,1850,116,2034,118,452,1,226,1,130,,0,71
+Previous RL,0obstacles_1,sokoban-4-1_0obstacles_1,0.9373838901519775,OK,2113,92,2303,92,608,1,124,1,124,,0,70
+DQN Agent 400e,0obstacles_10,sokoban-4-1_0obstacles_10,1.3459007740020752,OK,2098,92,2301,92,1055,1,267,1,137,,0,73
+DQN Agent 1000e,0obstacles_10,sokoban-4-1_0obstacles_10,0.8993072509765625,OK,2653,158,2912,161,612,1,315,1,183,,0,71
+Previous RL,0obstacles_10,sokoban-4-1_0obstacles_10,0.6757264137268066,OK,996,94,1065,95,414,1,44,1,58,,0,71
+DQN Agent 400e,0obstacles_2,sokoban-4-1_0obstacles_2,0.6464619636535645,OK,1245,174,1327,174,378,1,107,1,71,,0,68
+DQN Agent 1000e,0obstacles_2,sokoban-4-1_0obstacles_2,1.0440704822540283,OK,2336,210,2551,213,744,1,274,1,156,,0,66
+Previous RL,0obstacles_2,sokoban-4-1_0obstacles_2,1.1301844120025635,OK,2599,126,2871,127,839,1,180,1,167,,0,77
+DQN Agent 400e,0obstacles_3,sokoban-4-1_0obstacles_3,0.930671215057373,OK,2199,116,2376,116,638,1,221,1,134,,0,74
+DQN Agent 1000e,0obstacles_3,sokoban-4-1_0obstacles_3,0.7332754135131836,OK,846,96,899,96,435,1,66,1,52,,0,83
+Previous RL,0obstacles_3,sokoban-4-1_0obstacles_3,1.0654265880584717,OK,2408,96,2670,96,778,1,170,1,157,,0,71
+DQN Agent 400e,0obstacles_4,sokoban-4-1_0obstacles_4,1.1949329376220703,OK,3520,104,3859,104,904,1,443,1,228,,0,70
+DQN Agent 1000e,0obstacles_4,sokoban-4-1_0obstacles_4,0.9213011264801025,OK,2708,170,2969,173,639,1,317,1,185,,0,68
+Previous RL,0obstacles_4,sokoban-4-1_0obstacles_4,0.8064374923706055,OK,1676,84,1840,84,556,1,107,1,106,,0,67
+DQN Agent 400e,0obstacles_5,sokoban-4-1_0obstacles_5,0.6544549465179443,OK,790,40,840,40,364,1,64,1,45,,0,83
+DQN Agent 1000e,0obstacles_5,sokoban-4-1_0obstacles_5,0.5407211780548096,OK,347,40,371,40,270,1,27,1,20,,0,74
+Previous RL,0obstacles_5,sokoban-4-1_0obstacles_5,0.5269558429718018,OK,174,40,187,40,283,1,10,1,11,,0,61
+DQN Agent 400e,0obstacles_6,sokoban-4-1_0obstacles_6,0.9411323070526123,OK,2484,146,2699,147,666,1,277,1,155,,0,71
+DQN Agent 1000e,0obstacles_6,sokoban-4-1_0obstacles_6,1.5749790668487549,OK,3437,170,3780,173,855,1,424,1,239,,0,71
+Previous RL,0obstacles_6,sokoban-4-1_0obstacles_6,0.8340086936950684,OK,1429,118,1558,120,540,1,87,1,92,,0,84
+DQN Agent 400e,0obstacles_7,sokoban-4-1_0obstacles_7,0.5257198810577393,OK,95,40,97,40,253,1,4,1,5,,0,67
+DQN Agent 1000e,0obstacles_7,sokoban-4-1_0obstacles_7,0.6376383304595947,OK,607,126,642,127,375,1,45,1,39,,0,69
+Previous RL,0obstacles_7,sokoban-4-1_0obstacles_7,0.5267364978790283,OK,171,52,185,53,269,1,10,1,11,,0,67
+DQN Agent 400e,0obstacles_8,sokoban-4-1_0obstacles_8,0.6991548538208008,OK,1135,94,1214,94,387,1,109,1,71,,0,66
+DQN Agent 1000e,0obstacles_8,sokoban-4-1_0obstacles_8,0.6073951721191406,OK,696,138,731,138,321,1,46,1,44,,0,73
+Previous RL,0obstacles_8,sokoban-4-1_0obstacles_8,0.8486185073852539,OK,1901,96,2078,97,572,1,115,1,120,,0,74
+DQN Agent 400e,0obstacles_9,sokoban-4-1_0obstacles_9,1.056384801864624,OK,3179,126,3469,126,777,1,376,1,199,,0,80
+DQN Agent 1000e,0obstacles_9,sokoban-4-1_0obstacles_9,0.6379902362823486,OK,502,126,525,126,326,1,28,1,31,,0,69
+Previous RL,0obstacles_9,sokoban-4-1_0obstacles_9,1.0703043937683105,OK,2686,86,2972,86,794,1,188,1,180,,0,76
+DQN Agent 400e,1obstacles_1,sokoban-4-1_1obstacles_1,0.681133508682251,OK,1474,50,1568,50,406,1,125,1,84,,0,69
+DQN Agent 1000e,1obstacles_1,sokoban-4-1_1obstacles_1,0.5338761806488037,OK,763,74,812,76,277,1,74,1,58,,0,68
+Previous RL,1obstacles_1,sokoban-4-1_1obstacles_1,0.5038948059082031,OK,216,74,236,76,246,1,14,1,13,,0,67
+DQN Agent 400e,1obstacles_10,sokoban-4-1_1obstacles_10,0.507753849029541,OK,382,92,403,92,246,1,24,1,19,,0,66
+DQN Agent 1000e,1obstacles_10,sokoban-4-1_1obstacles_10,0.7994625568389893,OK,2706,92,2957,92,531,1,312,1,187,,0,66
+Previous RL,1obstacles_10,sokoban-4-1_1obstacles_10,0.875417947769165,OK,2067,116,2246,118,595,1,115,1,124,,0,72
+DQN Agent 400e,1obstacles_2,sokoban-4-1_1obstacles_2,0.45864343643188477,OK,100,42,102,42,203,1,4,1,6,,0,72
+DQN Agent 1000e,1obstacles_2,sokoban-4-1_1obstacles_2,0.558830976486206,OK,683,126,718,126,298,1,46,1,44,,0,68
+Previous RL,1obstacles_2,sokoban-4-1_1obstacles_2,0.5193428993225098,OK,321,42,336,42,268,1,8,1,19,,0,75
+DQN Agent 400e,1obstacles_3,sokoban-4-1_1obstacles_3,1.4841923713684082,OK,2518,124,2753,124,681,1,309,1,162,,0,75
+DQN Agent 1000e,1obstacles_3,sokoban-4-1_1obstacles_3,0.4697892665863037,OK,88,40,91,40,204,1,3,1,3,,0,73
+Previous RL,1obstacles_3,sokoban-4-1_1obstacles_3,0.49866414070129395,OK,172,40,186,40,242,1,10,1,11,,0,67
+DQN Agent 400e,1obstacles_4,sokoban-4-1_1obstacles_4,0.8408536911010742,OK,2247,74,2444,74,572,1,260,1,138,,0,67
+DQN Agent 1000e,1obstacles_4,sokoban-4-1_1obstacles_4,0.5262258052825928,OK,437,94,458,94,260,1,25,1,29,,0,68
+Previous RL,1obstacles_4,sokoban-4-1_1obstacles_4,0.7780582904815674,OK,1879,74,2047,74,532,1,107,1,120,,0,63
+DQN Agent 400e,1obstacles_5,sokoban-4-1_1obstacles_5,1.0886313915252686,OK,3520,104,3859,104,812,1,443,1,228,,0,71
+DQN Agent 1000e,1obstacles_5,sokoban-4-1_1obstacles_5,0.8740150928497314,OK,2708,170,2969,173,589,1,317,1,185,,0,73
+Previous RL,1obstacles_5,sokoban-4-1_1obstacles_5,0.7874703407287598,OK,1676,84,1840,84,511,1,107,1,106,,0,72
+DQN Agent 400e,1obstacles_6,sokoban-4-1_1obstacles_6,0.8249106407165527,OK,2231,62,2428,62,557,1,260,1,138,,0,76
+DQN Agent 1000e,1obstacles_6,sokoban-4-1_1obstacles_6,0.4914724826812744,OK,183,62,187,62,229,1,4,1,9,,0,69
+Previous RL,1obstacles_6,sokoban-4-1_1obstacles_6,0.6679573059082031,OK,1095,62,1170,62,408,1,50,1,57,,0,67
+DQN Agent 400e,1obstacles_7,sokoban-4-1_1obstacles_7,0.8312294483184814,OK,2259,124,2473,124,551,1,283,1,147,,0,70
+DQN Agent 1000e,1obstacles_7,sokoban-4-1_1obstacles_7,0.976607084274292,OK,3236,190,3562,193,702,1,398,1,225,,0,68
+Previous RL,1obstacles_7,sokoban-4-1_1obstacles_7,0.7688629627227783,OK,1677,106,1841,107,510,1,107,1,106,,0,68
+DQN Agent 400e,1obstacles_8,sokoban-4-1_1obstacles_8,0.5837688446044922,OK,806,52,856,52,317,1,64,1,45,,0,69
+DQN Agent 1000e,1obstacles_8,sokoban-4-1_1obstacles_8,0.5162653923034668,OK,569,52,605,52,267,1,41,1,33,,0,63
+Previous RL,1obstacles_8,sokoban-4-1_1obstacles_8,0.5347564220428467,OK,361,52,388,52,275,1,19,1,20,,0,67
+DQN Agent 400e,1obstacles_9,sokoban-4-1_1obstacles_9,1.0428519248962402,OK,2800,156,3056,156,722,1,330,1,176,,0,75
+DQN Agent 1000e,1obstacles_9,sokoban-4-1_1obstacles_9,2.966841220855713,OK,3445,156,3790,156,2638,1,419,1,239,,0,81
+Previous RL,1obstacles_9,sokoban-4-1_1obstacles_9,1.1356620788574219,OK,2407,96,2669,96,801,1,170,1,157,,0,70
+DQN Agent 400e,2obstacles_1,sokoban-4-1_2obstacles_1,0.7903761863708496,OK,1091,154,1203,155,472,1,133,1,113,,0,67
+DQN Agent 1000e,2obstacles_1,sokoban-4-1_2obstacles_1,1.0795035362243652,OK,2290,122,2541,122,731,1,346,1,227,,0,78
+Previous RL,2obstacles_1,sokoban-4-1_2obstacles_1,0.9267873764038086,OK,969,134,1060,135,593,1,79,1,89,,0,70
+DQN Agent 400e,2obstacles_10,sokoban-4-1_2obstacles_10,0.6201128959655762,OK,279,102,299,102,278,1,20,1,18,,0,87
+DQN Agent 1000e,2obstacles_10,sokoban-4-1_2obstacles_10,0.9886012077331543,OK,2608,94,2883,95,696,1,356,1,187,,0,72
+Previous RL,2obstacles_10,sokoban-4-1_2obstacles_10,0.9165515899658203,OK,840,126,924,128,611,1,67,1,53,,0,70
+DQN Agent 400e,2obstacles_2,sokoban-4-1_2obstacles_2,0.8005893230438232,OK,1718,0,1921,0,535,0,267,0,183,,0,66
+DQN Agent 1000e,2obstacles_2,sokoban-4-1_2obstacles_2,0.9077541828155518,OK,1718,0,1921,0,622,0,248,0,172,,0,68
+Previous RL,2obstacles_2,sokoban-4-1_2obstacles_2,0.9262573719024658,OK,1718,0,1921,0,669,0,181,0,174,,0,71
+DQN Agent 400e,2obstacles_3,sokoban-4-1_2obstacles_3,0.6635472774505615,OK,430,120,469,120,315,1,46,1,37,,0,67
+DQN Agent 1000e,2obstacles_3,sokoban-4-1_2obstacles_3,0.751234769821167,OK,754,100,827,100,438,1,98,1,62,,0,77
+Previous RL,2obstacles_3,sokoban-4-1_2obstacles_3,0.8792293071746826,OK,1119,134,1229,136,589,1,91,1,85,,0,73
+DQN Agent 400e,2obstacles_4,sokoban-4-1_2obstacles_4,3.9281206130981445,OK,954,72,1036,72,3376,1,112,1,72,,0,77
+DQN Agent 1000e,2obstacles_4,sokoban-4-1_2obstacles_4,0.6240174770355225,OK,337,72,355,72,317,1,22,1,24,,0,75
+Previous RL,2obstacles_4,sokoban-4-1_2obstacles_4,0.7707490921020508,OK,912,94,983,95,475,1,58,1,62,,0,73
+DQN Agent 400e,2obstacles_5,sokoban-4-1_2obstacles_5,0.8399040699005127,OK,1292,62,1406,62,489,1,148,1,88,,0,83
+DQN Agent 1000e,2obstacles_5,sokoban-4-1_2obstacles_5,0.921983003616333,OK,2405,62,2649,62,613,1,335,1,179,,0,70
+Previous RL,2obstacles_5,sokoban-4-1_2obstacles_5,0.8224217891693115,OK,866,62,929,62,491,1,47,1,50,,0,70
+DQN Agent 400e,2obstacles_6,sokoban-4-1_2obstacles_6,0.8184647560119629,OK,1268,0,1428,0,543,0,215,0,109,,0,71
+DQN Agent 1000e,2obstacles_6,sokoban-4-1_2obstacles_6,0.8255295753479004,OK,1268,0,1428,0,543,0,184,0,109,,0,68
+Previous RL,2obstacles_6,sokoban-4-1_2obstacles_6,0.9279391765594482,OK,1268,0,1428,0,650,0,138,0,105,,0,67
+DQN Agent 400e,2obstacles_7,sokoban-4-1_2obstacles_7,1.0482637882232666,OK,2373,82,2639,82,747,1,321,1,248,,0,69
+DQN Agent 1000e,2obstacles_7,sokoban-4-1_2obstacles_7,1.076756238937378,OK,2152,82,2387,82,762,1,313,1,213,,0,64
+Previous RL,2obstacles_7,sokoban-4-1_2obstacles_7,0.7217357158660889,OK,452,82,497,82,423,1,38,1,41,,0,70
+DQN Agent 400e,2obstacles_8,sokoban-4-1_2obstacles_8,0.9290990829467773,OK,1790,198,1972,200,605,1,239,1,142,,0,70
+DQN Agent 1000e,2obstacles_8,sokoban-4-1_2obstacles_8,2.687826633453369,OK,2626,124,2902,124,750,1,322,1,196,,0,75
+Previous RL,2obstacles_8,sokoban-4-1_2obstacles_8,1.006296157836914,OK,1835,104,2034,104,671,1,167,1,142,,0,77
+DQN Agent 400e,2obstacles_9,sokoban-4-1_2obstacles_9,0.6735236644744873,OK,267,82,294,82,361,1,33,1,26,,0,71
+DQN Agent 1000e,2obstacles_9,sokoban-4-1_2obstacles_9,0.6329553127288818,OK,210,82,221,82,287,1,12,1,11,,0,79
+Previous RL,2obstacles_9,sokoban-4-1_2obstacles_9,0.6972692012786865,OK,403,82,445,82,408,1,36,1,36,,0,69
+DQN Agent 400e,3obstacles_1,sokoban-4-1_3obstacles_1,0.7273867130279541,OK,536,122,581,122,385,1,62,1,50,,0,66
+DQN Agent 1000e,3obstacles_1,sokoban-4-1_3obstacles_1,0.7432694435119629,OK,1018,230,1140,232,433,1,161,1,103,,0,69
+Previous RL,3obstacles_1,sokoban-4-1_3obstacles_1,0.7894151210784912,OK,756,122,844,122,495,1,81,1,78,,0,73
+DQN Agent 400e,3obstacles_10,sokoban-4-1_3obstacles_10,0.677626371383667,OK,294,50,315,50,348,1,30,1,22,,0,74
+DQN Agent 1000e,3obstacles_10,sokoban-4-1_3obstacles_10,0.7445924282073975,OK,1101,50,1199,50,436,1,137,1,89,,0,71
+Previous RL,3obstacles_10,sokoban-4-1_3obstacles_10,0.7007019519805908,OK,378,50,402,50,425,1,24,1,22,,0,71
+DQN Agent 400e,3obstacles_2,sokoban-4-1_3obstacles_2,0.8615162372589111,OK,1596,0,1774,0,596,0,231,0,195,,0,71
+DQN Agent 1000e,3obstacles_2,sokoban-4-1_3obstacles_2,0.8269426822662354,OK,1596,0,1774,0,549,0,251,0,188,,0,76
+Previous RL,3obstacles_2,sokoban-4-1_3obstacles_2,0.964155912399292,OK,1596,0,1774,0,698,0,167,0,189,,0,72
+DQN Agent 400e,3obstacles_3,sokoban-4-1_3obstacles_3,0.6405642032623291,OK,557,0,621,0,352,0,79,0,70,,0,73
+DQN Agent 1000e,3obstacles_3,sokoban-4-1_3obstacles_3,0.6169390678405762,OK,557,0,621,0,355,0,81,0,65,,0,73
+Previous RL,3obstacles_3,sokoban-4-1_3obstacles_3,0.8241491317749023,OK,557,0,621,0,560,0,69,0,66,,0,71
+DQN Agent 400e,3obstacles_4,sokoban-4-1_3obstacles_4,3.725475549697876,OK,1419,72,1588,72,3165,1,216,1,147,,0,70
+DQN Agent 1000e,3obstacles_4,sokoban-4-1_3obstacles_4,0.772162675857544,OK,880,72,980,72,444,1,133,1,87,,0,70
+Previous RL,3obstacles_4,sokoban-4-1_3obstacles_4,0.793170690536499,OK,388,72,425,72,513,1,35,1,38,,0,70
+DQN Agent 400e,3obstacles_5,sokoban-4-1_3obstacles_5,0.7582893371582031,OK,840,42,931,42,389,1,127,1,83,,0,64
+DQN Agent 1000e,3obstacles_5,sokoban-4-1_3obstacles_5,0.5937731266021729,OK,154,42,157,42,305,1,4,1,8,,0,69
+Previous RL,3obstacles_5,sokoban-4-1_3obstacles_5,0.7794110774993896,OK,213,42,230,42,456,1,16,1,19,,0,70
+DQN Agent 400e,3obstacles_6,sokoban-4-1_3obstacles_6,0.7856955528259277,OK,754,122,844,122,464,1,112,1,89,,0,70
+DQN Agent 1000e,3obstacles_6,sokoban-4-1_3obstacles_6,0.6820006370544434,OK,507,144,562,145,391,1,79,1,52,,0,69
+Previous RL,3obstacles_6,sokoban-4-1_3obstacles_6,0.8000950813293457,OK,507,122,566,122,498,1,57,1,55,,0,71
+DQN Agent 400e,3obstacles_7,sokoban-4-1_3obstacles_7,0.8957369327545166,OK,2201,42,2423,42,565,1,284,1,167,,0,70
+DQN Agent 1000e,3obstacles_7,sokoban-4-1_3obstacles_7,0.7652614116668701,OK,548,42,575,42,442,1,26,1,30,,0,73
+Previous RL,3obstacles_7,sokoban-4-1_3obstacles_7,0.6011555194854736,OK,306,42,324,42,340,1,14,1,17,,0,72
+DQN Agent 400e,3obstacles_8,sokoban-4-1_3obstacles_8,0.58622145652771,OK,203,0,227,0,339,0,33,0,22,,0,67
+DQN Agent 1000e,3obstacles_8,sokoban-4-1_3obstacles_8,0.5519189834594727,OK,203,0,227,0,312,0,30,0,21,,0,66
+Previous RL,3obstacles_8,sokoban-4-1_3obstacles_8,0.6994385719299316,OK,203,0,227,0,447,0,26,0,21,,0,74
+DQN Agent 400e,3obstacles_9,sokoban-4-1_3obstacles_9,0.7011702060699463,OK,811,62,886,62,420,1,109,1,67,,0,69
+DQN Agent 1000e,3obstacles_9,sokoban-4-1_3obstacles_9,0.7421998977661133,OK,676,62,732,62,343,1,78,1,58,,0,69
+Previous RL,3obstacles_9,sokoban-4-1_3obstacles_9,2.155653715133667,OK,498,84,539,85,430,1,39,1,41,,0,69
+DQN Agent 400e,4obstacles_1,sokoban-4-1_4obstacles_1,0.5139288902282715,OK,18,0,19,0,279,0,2,0,4,,0,70
+DQN Agent 1000e,4obstacles_1,sokoban-4-1_4obstacles_1,0.6198561191558838,OK,18,0,19,0,381,0,2,0,4,,0,69
+Previous RL,4obstacles_1,sokoban-4-1_4obstacles_1,0.5521225929260254,OK,18,0,19,0,310,0,2,0,4,,0,69
+DQN Agent 400e,4obstacles_10,sokoban-4-1_4obstacles_10,0.7016184329986572,OK,459,0,513,0,433,0,80,0,53,,0,72
+DQN Agent 1000e,4obstacles_10,sokoban-4-1_4obstacles_10,0.7124888896942139,OK,459,0,513,0,414,0,65,0,52,,0,64
+Previous RL,4obstacles_10,sokoban-4-1_4obstacles_10,0.6363546848297119,OK,459,0,513,0,375,0,56,0,49,,0,79
+DQN Agent 400e,4obstacles_2,sokoban-4-1_4obstacles_2,0.9860548973083496,OK,1674,144,1889,145,624,1,259,1,168,,0,71
+DQN Agent 1000e,4obstacles_2,sokoban-4-1_4obstacles_2,0.8365209102630615,OK,1649,144,1855,145,550,1,276,1,155,,0,68
+Previous RL,4obstacles_2,sokoban-4-1_4obstacles_2,0.8343462944030762,OK,1524,144,1711,145,555,1,178,1,144,,0,66
+DQN Agent 400e,4obstacles_3,sokoban-4-1_4obstacles_3,0.5827784538269043,OK,188,0,207,0,342,0,29,0,26,,0,65
+DQN Agent 1000e,4obstacles_3,sokoban-4-1_4obstacles_3,0.578059196472168,OK,188,0,207,0,331,0,27,0,24,,0,74
+Previous RL,4obstacles_3,sokoban-4-1_4obstacles_3,0.6074221134185791,OK,188,0,207,0,366,0,22,0,26,,0,71
+DQN Agent 400e,4obstacles_4,sokoban-4-1_4obstacles_4,0.7385153770446777,OK,1086,0,1217,0,500,0,172,0,129,,0,65
+DQN Agent 1000e,4obstacles_4,sokoban-4-1_4obstacles_4,0.8052959442138672,OK,1086,0,1217,0,521,0,167,0,116,,0,78
+Previous RL,4obstacles_4,sokoban-4-1_4obstacles_4,0.8929877281188965,OK,1086,0,1217,0,631,0,133,0,122,,0,72
+DQN Agent 400e,4obstacles_5,sokoban-4-1_4obstacles_5,0.7146766185760498,OK,412,0,460,0,447,0,65,0,45,,0,77
+DQN Agent 1000e,4obstacles_5,sokoban-4-1_4obstacles_5,0.5868511199951172,OK,412,0,460,0,344,0,66,0,44,,0,70
+Previous RL,4obstacles_5,sokoban-4-1_4obstacles_5,2.6310205459594727,OK,412,0,460,0,2391,0,51,0,43,,0,66
+DQN Agent 400e,4obstacles_6,sokoban-4-1_4obstacles_6,0.5554845333099365,OK,188,0,210,0,268,0,26,0,26,,0,70
+DQN Agent 1000e,4obstacles_6,sokoban-4-1_4obstacles_6,0.561521053314209,OK,188,0,210,0,318,0,33,0,23,,0,70
+Previous RL,4obstacles_6,sokoban-4-1_4obstacles_6,0.5608813762664795,OK,188,0,210,0,308,0,25,0,24,,0,70
+DQN Agent 400e,4obstacles_7,sokoban-4-1_4obstacles_7,0.6652684211730957,OK,910,0,1017,0,414,0,148,0,105,,0,70
+DQN Agent 1000e,4obstacles_7,sokoban-4-1_4obstacles_7,0.7203967571258545,OK,910,0,1017,0,458,0,154,0,99,,0,71
+Previous RL,4obstacles_7,sokoban-4-1_4obstacles_7,0.837031364440918,OK,910,0,1017,0,575,0,116,0,103,,0,68
+DQN Agent 400e,4obstacles_8,sokoban-4-1_4obstacles_8,0.5614445209503174,OK,228,0,257,0,315,0,37,0,26,,0,66
+DQN Agent 1000e,4obstacles_8,sokoban-4-1_4obstacles_8,0.5491468906402588,OK,228,0,257,0,299,0,41,0,25,,0,72
+Previous RL,4obstacles_8,sokoban-4-1_4obstacles_8,0.5330312252044678,OK,228,0,257,0,304,0,34,0,24,,0,67
+DQN Agent 400e,4obstacles_9,sokoban-4-1_4obstacles_9,0.5174059867858887,OK,18,0,19,0,282,0,2,0,4,,0,69
+DQN Agent 1000e,4obstacles_9,sokoban-4-1_4obstacles_9,0.48037171363830566,OK,18,0,19,0,245,0,2,0,4,,0,68
+Previous RL,4obstacles_9,sokoban-4-1_4obstacles_9,0.5864620208740234,OK,18,0,19,0,314,0,2,0,4,,0,68
