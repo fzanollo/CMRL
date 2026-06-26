@@ -177,8 +177,7 @@ if __name__ == "__main__":
                 'use_priority_replay': True,
             }
 
-            # Training run on different problem configurations (scenarios), starting from scratch -----
-            train_scenarios = ["2obstaclesC1"]#, "1obstacle_far", "2obstacles"]
+            train_scenarios = ["2obstaclesC1"]
 
             agent = None
             train_from_scenario = 0

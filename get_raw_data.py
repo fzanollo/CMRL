@@ -68,17 +68,19 @@ def parse_stderr(stderr_decoded):
     return n_transitions, max_states, winning_state_size, game_state_size
 
 
-def get_instances(base_input, problem):
+def get_instances(base_input, problem, configs_to_run=None):
     # Get all the instances in the lts folder for the given problem
     instances = []
     problem_path = f"{base_input}/{problem}"
     for file in os.listdir(problem_path):
         if file.endswith(".lts"):
-            instances.append(file.replace(".lts", ""))
+            # if any of the config to run names appears on the instance name (conf in file) or configs_to_run is none the add it to instances
+            if configs_to_run is None or any(conf in file for conf in configs_to_run):
+                instances.append(file.replace(".lts", ""))
     return instances
 
 
-def run_all(base_input):
+def run_all(base_input, configs_to_run=None):
     """
     Solves the base_input problem with monolithic and gets the controller and feature list results
     :return:
@@ -87,7 +89,7 @@ def run_all(base_input):
 
     for problem in problems:
         # grab the instances from the lts folder, all lts inside the problem subfolder
-        instances = get_instances(base_input, problem)
+        instances = get_instances(base_input, problem, configs_to_run)
         run_monolithic_problem(base_input, problem, instances)
 
 
@@ -105,5 +107,5 @@ def remove_big_files():
                     os.remove(os.path.join(root, controller_file))
 
 if __name__ == '__main__':
-    run_all(BASE_INPUT)
+    run_all(BASE_INPUT, ["2obstaclesC1"])
     # remove_big_files()
