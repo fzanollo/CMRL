@@ -21,7 +21,7 @@ CMRL trains a Deep Q-Network agent as a reachability controller on a pre-labeled
 - `rl_results/`
   - Results from the 5 independent CMRL training runs (`run_1/` … `run_5/`), each containing trained agent checkpoints and per-problem synthesis results. Also includes Delgado et al.'s prior RL baseline results for direct comparison. Runtime summary CSVs (`runtime_totals_per_run.csv`, `runtime_totals_summary.csv`) aggregate wall-clock times across all runs.
 - `ra_results/`
-  - Results obtained using the Random Action (RA) heuristic, one CSV per problem size.
+  - Results obtained using the Ready Abstraction (RA) heuristic, one CSV per problem size.
 - `monolithic_results/`
   - Results from the monolithic (exhaustive) synthesis baseline, one CSV per problem size.
 - Top-level scripts:
