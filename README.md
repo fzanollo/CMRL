@@ -24,6 +24,8 @@ CMRL trains a Deep Q-Network agent as a reachability controller on a pre-labeled
   - Results obtained using the Ready Abstraction (RA) heuristic, one CSV per problem size.
 - `monolithic_results/`
   - Results from the monolithic (exhaustive) synthesis baseline, one CSV per problem size.
+- `analysis/`
+  - Scripts that turn the raw results above into the paper's summary tables, LaTeX snippets, and plots (gain/win-rate tables, per-stratum breakdowns, runtime totals, training-time figure). Which heuristics (RA, CMRL, Delgado et al.) go into a table is configurable via CLI flags, defaulting to all three. See `analysis/README.md`.
 - Top-level scripts:
   - `DQNAgent.py`: DQN agent definition.
   - `get_raw_data.py`: generates raw features and controller artifacts.

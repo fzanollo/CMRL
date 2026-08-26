@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Generated analysis outputs (regenerate via analysis/*.py)
+analysis/output/
+
 # C extensions
 *.so
 
