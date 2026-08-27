@@ -19,7 +19,7 @@ from typing import List
 import numpy as np
 import pandas as pd
 
-from . import config
+from analysis import config
 
 
 def pairwise_gains(df: pd.DataFrame, baseline_model: str, agent_model: str, metric: str) -> pd.DataFrame:

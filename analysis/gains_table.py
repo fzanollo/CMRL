@@ -28,9 +28,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from . import config
-from .data_loading import load_all_runs
-from .gains_core import compute_agent_gains, distribution_summary, win_rate_summary
+from analysis import config
+from analysis.data_loading import load_all_runs
+from analysis.gains_core import compute_agent_gains, distribution_summary, win_rate_summary
 
 
 def build_summary_table(per_instance: pd.DataFrame, agent_keys: List[str]) -> pd.DataFrame:
@@ -139,7 +139,7 @@ def plot_gain_boxplot(per_instance: pd.DataFrame, agent_keys: List[str], out_pat
         x_anchor = x + box_half_width if to_right else x - box_half_width
         dx = 16 if to_right else -16
         leader = dict(
-            textcoords="offset points", fontsize=8,
+            textcoords="offset points", fontsize=12,
             ha="left" if to_right else "right", va="center",
             arrowprops=dict(arrowstyle="-", lw=0.6, color="0.45", shrinkA=0, shrinkB=1),
         )
@@ -150,7 +150,7 @@ def plot_gain_boxplot(per_instance: pd.DataFrame, agent_keys: List[str], out_pat
         ax.annotate(f"whisker {lower_cap:+.0f}%", xy=(x, lower_cap), xytext=(dx, -9), **leader)
 
     ax.axhline(0.0, color="black", linestyle="--", linewidth=1)
-    ax.set_ylabel("Execution time gain (%)  (positive = faster)")
+    ax.set_ylabel("Execution time gain (%)  (positive = faster)", fontsize=12)
     ax.grid(visible=True, which="both", linestyle="--", linewidth=0.5)
     fig.tight_layout()
     fig.savefig(out_path, dpi=200)

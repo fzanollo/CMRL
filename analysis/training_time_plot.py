@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from . import config
+from analysis import config
 
 
 def load_prev_rl_training_time(run_dir: Path) -> float:

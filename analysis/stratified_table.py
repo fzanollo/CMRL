@@ -17,9 +17,9 @@ from typing import List
 
 import pandas as pd
 
-from . import config
-from .data_loading import load_all_runs
-from .gains_core import compute_agent_gains, win_rate_summary
+from analysis import config
+from analysis.data_loading import load_all_runs
+from analysis.gains_core import compute_agent_gains, win_rate_summary
 
 
 def build_stratified_table(per_instance: pd.DataFrame, problems: List[str], agent_keys: List[str]) -> pd.DataFrame:

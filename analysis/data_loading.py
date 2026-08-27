@@ -16,7 +16,7 @@ from typing import List, Optional
 
 import pandas as pd
 
-from . import config
+from analysis import config
 
 
 def load_run_problem(results_root: Path, run_id: int, problem: str) -> pd.DataFrame:

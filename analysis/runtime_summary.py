@@ -20,8 +20,8 @@ from typing import List
 
 import pandas as pd
 
-from . import config
-from .data_loading import load_all_runs, filter_heuristics
+from analysis import config
+from analysis.data_loading import load_all_runs, filter_heuristics
 
 
 def per_instance_stats(df: pd.DataFrame, heuristic_keys: List[str], metric: str) -> pd.DataFrame:
