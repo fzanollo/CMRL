@@ -16,7 +16,9 @@ Gain/win-rate computation against any baseline heuristic is centralized in `gain
   tidy dataframe; filters to `result == "OK"` by default.
 - `gains_core.py` — shared gain/win-rate computation (pairwise per-run gain → aggregate across runs →
   win-rate summary). Used by both table scripts below.
-- `gains_table.py` — the paper's main comparison table (mean/median gain, win rate) + boxplot.
+- `gains_table.py` — the paper's main comparison table (mean/median gain, win rate) + a companion
+  distribution table (`gains_distribution.tex`/`.csv`: P5/Q1/median/Q3/P95, IQR, skewness, heavy-tail
+  counts) + boxplot (with Q1/median/Q3 and the 1.5×IQR whisker annotated).
 - `stratified_table.py` — the same comparison broken down per grid size (stratum).
 - `runtime_summary.py` — total and per-instance execution-time summary across heuristics, with ratios to a
   reference heuristic (this is what backs claims like "RA is ~4x slower per instance").
@@ -67,6 +69,11 @@ since it's fully regenerable from the CSVs already in the repo.
 
 - Gain formula (lower metric is better, e.g. `execution_time`):
   `gain_pct = (baseline_value - agent_value) / baseline_value * 100`. Positive = the agent is faster.
+- The gain is bounded above by `+100%` (the agent can at best be instantaneous) but is unbounded
+  below, so the per-instance gain distribution is strongly left-skewed. `gains_table.py` therefore
+  also reports quartiles, the 5th/95th percentiles, the IQR, the (adjusted Fisher–Pearson) skewness,
+  and counts of instances below `-50/-100/-200%` (`distribution_summary` in `gains_core.py`); the
+  median, not the mean, is the representative central value.
 - Pairing is always done per `(problem, instance_name, run_id)` — an agent is only compared against a
   baseline measurement from the *same* run. RA and other training-free heuristics were only measured once
   (in `run_1`), so any comparison involving them is automatically restricted to that run via the inner join;

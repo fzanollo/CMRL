@@ -70,6 +70,41 @@ def win_rate_summary(per_instance_gains: pd.Series) -> dict:
     }
 
 
+def distribution_summary(per_instance_gains: pd.Series) -> dict:
+    """Distributional characterization of a per-instance gain series.
+
+    The gain metric is bounded above by +100% (an agent can at best be
+    instantaneous) but unbounded below, so the distribution is typically
+    strongly left-skewed and the median is more representative than the mean.
+    This returns the quartiles, the 5th/95th percentiles, the inter-quartile
+    range, the (adjusted Fisher-Pearson) skewness, and counts of instances in
+    the heavy lower tail.
+    """
+    vals = per_instance_gains.dropna()
+    n = len(vals)
+    if n == 0:
+        keys = ("min", "p5", "q1", "median", "q3", "p95", "max", "iqr", "skew")
+        return {"n": 0, **{k: float("nan") for k in keys},
+                "n_below_50": 0, "n_below_100": 0, "n_below_200": 0}
+
+    p5, q1, median, q3, p95 = vals.quantile([0.05, 0.25, 0.5, 0.75, 0.95])
+    return {
+        "n": n,
+        "min": float(vals.min()),
+        "p5": float(p5),
+        "q1": float(q1),
+        "median": float(median),
+        "q3": float(q3),
+        "p95": float(p95),
+        "max": float(vals.max()),
+        "iqr": float(q3 - q1),
+        "skew": float(vals.skew()),
+        "n_below_50": int((vals < -50).sum()),
+        "n_below_100": int((vals < -100).sum()),
+        "n_below_200": int((vals < -200).sum()),
+    }
+
+
 def compute_agent_gains(
     df: pd.DataFrame,
     baseline_key: str,
